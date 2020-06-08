@@ -64,12 +64,14 @@ module.exports = function (ctx) {
       env: ctx.dev
       ? { // so on dev we'll have
         API: JSON.stringify('/api/'),
-        DB: JSON.stringify('Test2')
+        //DB: JSON.stringify('preProduction')
+        DB: JSON.stringify('Test8')
       }
       : { // and on build (production):
         // API: JSON.stringify('http://96.9.80.23:8071/')
         API: JSON.stringify('http://96.9.80.23/api/'),
-        DB: JSON.stringify('enterpriseDB')
+        //DB: JSON.stringify('enterpriseDB')
+        DB: JSON.stringify('preProduction')
       },
       scopeHoisting: true,
       // vueRouterMode: 'history',
